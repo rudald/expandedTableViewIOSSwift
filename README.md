@@ -10,6 +10,8 @@ Using section headers:
 
 ![alt tag](https://github.com/rudald/expandedTableViewIOSSwift/blob/master/ExpandableTableView/sectionHeadersAndRows_37.png)
 
+You can also check implemented example here in this repository
+
 To use it you should:
 Add this file ExpandableTableView.swift to your project and in some TableViewController extend from ExpandableTableView class.
 
