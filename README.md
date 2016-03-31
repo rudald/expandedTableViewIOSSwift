@@ -13,7 +13,7 @@ Using section headers:
 You can also check implemented example here in this repository
 
 To use it you should:
-Add this file ExpandableTableView.swift to your project and in some TableViewController extend from ExpandableTableView class.
+<b> Add this file ExpandableTableView.swift to your project and in some TableViewController extend from ExpandableTableView class. </b>
 
 To work it properly you should do:
 
@@ -48,3 +48,7 @@ To work it properly you should do:
             
     c) execute set NumberOfCategoriesAndSubcategories as Int Array [Int], index = section number, value = number of rows
         with second argument (useSectionHeaders) true
+
+To roll up the category you should use <b> rollUpExpandedTable() </b> function
+
+If you need any useful method inside class please let me know.
