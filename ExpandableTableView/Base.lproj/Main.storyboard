@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eJa-Xj-lGz">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Event List Table View Controller-->
+        <scene sceneID="gXD-fQ-lD1">
+            <objects>
+                <tableViewController id="eJa-Xj-lGz" customClass="EventListTableViewController" customModule="ExpandableTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="s1i-Y8-f3i">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventHeader" id="k81-F7-Q9T" customClass="EventHeaderCell" customModule="ExpandableTableView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k81-F7-Q9T" id="Qln-vH-qdk">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxk-g4-ygm">
+                                            <rect key="frame" x="28" y="11" width="554" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cxk-g4-ygm" firstAttribute="centerY" secondItem="Qln-vH-qdk" secondAttribute="centerY" id="YEA-jB-Qbh"/>
+                                        <constraint firstItem="cxk-g4-ygm" firstAttribute="leading" secondItem="Qln-vH-qdk" secondAttribute="leadingMargin" constant="20" id="hEy-hK-s9M"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="cxk-g4-ygm" secondAttribute="trailing" constant="10" id="hjP-Re-x87"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="monthLabel" destination="cxk-g4-ygm" id="m2r-sB-rAp"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" id="bIj-w7-z2w" customClass="EventExpandedCell" customModule="ExpandableTableView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bIj-w7-z2w" id="IGB-pY-Kvq">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EventName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwa-ox-gnR">
+                                            <rect key="frame" x="108" y="11.5" width="474" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Cwa-ox-gnR" firstAttribute="leading" secondItem="IGB-pY-Kvq" secondAttribute="leadingMargin" constant="100" id="3Dv-q0-ATO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Cwa-ox-gnR" secondAttribute="trailing" constant="10" id="PfG-vp-jJI"/>
+                                        <constraint firstItem="Cwa-ox-gnR" firstAttribute="centerY" secondItem="IGB-pY-Kvq" secondAttribute="centerY" id="fbR-xJ-EzY"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameEventLabel" destination="Cwa-ox-gnR" id="jCs-HI-AmE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eJa-Xj-lGz" id="hKB-mJ-V2b"/>
+                            <outlet property="delegate" destination="eJa-Xj-lGz" id="7AT-Lh-W2V"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HCN-kG-SZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="138"/>
+        </scene>
+    </scenes>
+</document>
