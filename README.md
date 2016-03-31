@@ -12,14 +12,11 @@ Using section headers:
 
 You can also check implemented example here in this repository
 
-To use it you should:
-<b> Add this file ExpandableTableView.swift to your project and in some TableViewController extend from ExpandableTableView class. </b>
-
 To work it properly you should do:
 
   1. To do it only by rows you should:
   
-    a) extend the ExpandableTableView class
+    a) Add ExpandableTableView.swift file to your project and subclass your class by ExpandableTableView class
     
     b) override methods
     
@@ -36,7 +33,7 @@ To work it properly you should do:
         
   2. Section headers + rows
   
-    a) extend the ExpandableTableView class
+    a) Add ExpandableTableView.swift file to your project and subclass your class by ExpandableTableView class
         
     b) override methods
         
